@@ -1,4 +1,4 @@
-package Suku;
+// package Suku;
 
 class MoveThe {
 
