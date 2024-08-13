@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class HitTheLottery {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        int n = scanner.nextInt();
+        int count = 0;
+        
+        // Use as many 100 dollar bills as possible
+        count += n / 100;
+        n %= 100;
+        
+        // Use as many 20 dollar bills as possible
+        count += n / 20;
+        n %= 20;
+        
+        // Use as many 10 dollar bills as possible
+        count += n / 10;
+        n %= 10;
+        
+        // Use as many 5 dollar bills as possible
+        count += n / 5;
+        n %= 5;
+        
+        // Use the remaining 1 dollar bills
+        count += n / 1;
+        
+        // Output the minimum number of bills
+        System.out.println(count);
+        
+        scanner.close();
+    }
+}
